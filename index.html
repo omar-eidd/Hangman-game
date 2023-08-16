@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="bank.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+          <div class="tabs">
+            <a href="news.html">
+          <div class="tab" >News</div>
+            </a>
+            <a href="highs.html">
+          <div class="tab" >Highscore</div>
+            </a>
+            <a href="help.html">
+          <div class="tab" >Help and Support</div>
+            </a>
+        </div>
+        <a href="index.html">
+        <div class="home" >Home</div>
+        </a>
+      </div>
+    </header>
+    <div class="home-screen">
+        <h1>Welcome to the Hangman</h1>
+        
+      </div>
+      <div class="home-screen">
+        <h2> A game where we test your lexical intelligence</h2>
+      </div>
+      
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img class="slideshow-img" src="hang1.jpeg" alt="Image 1">
+        </div>
+      
+        <div class="mySlides">
+          <img class="slideshow-img" src="hang3.jpg" alt="Image 2">
+        </div>
+      
+        <div class="mySlides">
+          <img class="slideshow-img" src="hang2.jpeg" alt="Image 3">
+        </div>
+      
+        <div class="mySlides">
+          <img class="slideshow-img" src="hang4.png" alt="Image 4">
+        </div>
+      </div>
+      
+      <script>
+        let slideIndex = 0;
+        showSlides();
+      
+        function showSlides() {
+          let i;
+          const slides = document.getElementsByClassName("mySlides");
+      
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+      
+          slideIndex++;
+      
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+      
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 4500); 
+        }
+      </script>
+      <button class="play-button" id="playNowButton">Play Now</button>
+      <script>
+        document.getElementById("playNowButton").addEventListener("click", function() {
+          window.location.href = "https://taha007860.github.io/Hangman/"; 
+        });
+      </script>
+      <div class="footer">
+        <p>&copy; Our final project, submitted to the IEEE committee</p>
+      </div>
+</body>
+</html>
